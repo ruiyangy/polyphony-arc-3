@@ -1,0 +1,11 @@
+__pycache__/
+*.pyc
+swarm_runs/
+logs/
+*.log
+.ipynb_checkpoints/
+.env
+
+# internal-only release tooling — never publish (it enumerates the very
+# patterns we scrub for, so shipping it would be self-defeating)
+scripts/

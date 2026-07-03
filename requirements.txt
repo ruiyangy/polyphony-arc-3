@@ -1,0 +1,28 @@
+# ARC-HS runtime dependencies.
+#
+# Core harness + vendored ARC SDK (arc_agi / arcengine under vendor/arc):
+numpy>=1.24
+requests>=2.28
+flask>=2.2
+pydantic>=2.0
+python-dotenv>=1.0
+
+# LLM client (the coding agent talks to an OpenAI-compatible chat endpoint,
+# e.g. a local vLLM serving Qwen3.6-27B):
+openai>=1.30
+httpx>=0.24
+
+# Context-compaction token accounting uses the model's real tokenizer:
+transformers>=4.40
+
+# Observation tooling the Heuristic System is built on (object detector,
+# ASCII<->PNG frame rendering); matplotlib is used by the vendored ARC SDK's
+# renderer.
+scipy>=1.10
+pillow>=9.0
+matplotlib>=3.7
+
+# Optional: the agent is encouraged (in the prompt) to reach for these when its
+# planner needs them; not imported by the harness itself.
+# networkx>=3.0
+# sympy>=1.12

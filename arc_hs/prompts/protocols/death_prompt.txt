@@ -1,0 +1,7 @@
+You have reached the `GAME_OVER` state in the current attempt.
+A `GAME_OVER` attempt is dead: the game will reject (or silently ignore) every action except `RESET`. The moment you see `state: GAME_OVER` in client output, STOP sending ACTION1..ACTION7 and run `python3 client/client.py move RESET` before anything else — every non-RESET action on a dead attempt wastes your step budget.
+Verify that you understand why this happened, and incorporate that explanation into your Heuristic System.
+Inspect the result of the last step with your own eyes, looking for visual clues that could help explain the failure. PNG inspection is mandatory whenever an action produces multiple frames. You should run the animation-analysis pass and also inspect such animations yourself. These animations may contain important clues for understanding why `GAME_OVER` happened.
+Remember: the game mechanics are very simple. You should never have multiple level-specific conditions for reaching `GAME_OVER`. If your Heuristic System currently has such conditions, think about how to generalize them.
+Inspect the `GAME_OVER` step visually and look for the simplest shared explanation.
+
